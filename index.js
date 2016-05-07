@@ -3,7 +3,10 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 var fs = require('fs');
 
-var url = 'mongodb://10.98.101.150:27017/open010_mad_desa';
+var ipAddress = "";
+var dbName = "open010";
+
+var url = 'mongodb://'+ipAddress+':27017/'+dbName;
 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
